@@ -7,8 +7,12 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
   end
+<<<<<<< HEAD
   
   # new
+=======
+
+>>>>>>> ef0e29b8bb87f18079e190ca0e56096f48ae3e42
   get '/articles/new' do
     erb :new
   end
@@ -17,7 +21,11 @@ class ApplicationController < Sinatra::Base
   post '/articles' do
     @article = Article.create(params)
 
+<<<<<<< HEAD
   redirect "/articles/#{@article.id}"
+=======
+  redirect '/articles/:id'
+>>>>>>> ef0e29b8bb87f18079e190ca0e56096f48ae3e42
   end
   
   # index
